@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Merriweather', serif;
+    font-size: 62.5%;
+}
+
+body{
+    color: #222;
+    background-color: #333;
+}
+
+.container{
+    background-color: #fafafa;
+    font-size: 1.4rem;
+    width: 100%;
+    min-height: 100vh;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    background-color: rgb(40, 151, 224);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.circle button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background-color: transparent;
+    border: 0;
+    color: #fafafa;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.circle button:focus{
+    outline: none;
+}
+
+.circle button#open{
+    left: 60%;
+}
+
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul{
+    list-style: none;
+    padding-left: 30px;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    color: #fafafa;
+    margin: 40px 0;
+    cursor: pointer;
+    transform: translateX(-100%);
+    transition: transform 0.5s linear;
+}
+
+nav ul li i{
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+nav ul li + li{
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li + li + li{
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+nav li:hover, li i:hover{
+    color: rgb(40, 151, 224);
+}
+
+article{
+    line-height: 2.8rem;
+    width: 70%;
+    margin: auto;
+    padding: 1rem;
+}
+
+article h1{
+    padding-top: 2rem;
+    line-height: 1rem;
+}
+
+sub{
+    color: #555;
+    font-style: italic;
+}
+
+.dog-png{
+    max-width: 100%;
+}
+
+section{
+    color: #333;
+    text-align: justify;
+    padding: 1rem 0 1rem 0;
+}
+
+h4{
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
